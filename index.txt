@@ -1,0 +1,21 @@
+PW Learn 
+
+
+working directory files are known as untracked files 
+
+git add -> working directory to staging area
+
+
+working directory -> staging area
+untracked files   -> tracked files
+
+
+
+wroking directory --- staging area            --- local repo
+file changes      --- files changes tracked   --- commit to local repo
+
+.git(local repo)
+
+the files which are in staging area are in green color
+
+when we click git commit we move the files to the local repo
