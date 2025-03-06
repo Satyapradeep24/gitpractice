@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Test Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        .menu-btn {
+            font-size: 18px;
+            padding: 10px 20px;
+            background-color: blue;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin: 10px;
+        }
+        .menu {
+            display: none;
+            margin-top: 20px;
+            padding: 10px;
+            border: 2px solid black;
+            background-color: lightgray;
+            width: 200px;
+            text-align: left;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .menu a {
+            display: block;
+            padding: 5px;
+            text-decoration: none;
+            color: black;
+            cursor: pointer;
+        }
+        .menu a:hover {
+            background-color: darkgray;
+        }
+        #clickedItem {
+            margin-top: 20px;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <button class="menu-btn" onclick="toggleMenu()">☰ Open Menu</button>
+    
+    <div class="menu" id="menu">
+        <a href="#" id="home" onclick="showClicked('Home')">Home</a>
+        <a href="#" id="about" onclick="showClicked('About')">About</a>
+        <a href="#" id="services" onclick="showClicked('Services')">Services</a>
+        <a href="#" id="logout" onclick="showClicked('Logout')">Logout</a>
+    </div>
+    <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
+        <h2 id="clickedItem">Click on a menu item</h2>
+
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById("menu");
+            menu.style.display = (menu.style.display === "block") ? "none" : "block";
+        }
+
+        function showClicked(item) {
+            document.getElementById("clickedItem").innerText = item + " Clicked";
+        }
+    </script>
+</body>
+</html>
