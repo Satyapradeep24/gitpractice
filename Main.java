@@ -5,6 +5,7 @@ class BeingZero {
         // Adjacency List representation
         List<List<Integer>> adj = new ArrayList<>();
         for (int i = 0; i <= N; i++) {
+            //shutpp
             adj.add(new ArrayList<>());
         }
 
